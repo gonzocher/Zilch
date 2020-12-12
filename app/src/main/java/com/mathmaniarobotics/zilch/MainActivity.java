@@ -136,7 +136,28 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView4.setText("" + number);
     }
 
+    /**
+     * This method resets all scores back to zero.
+     */
+    public void resetScores (View view) {
+        score1 = 0;
+        score2 = 0;
+        score3 = 0;
+        score4 = 0;
+        display1(score1);
+        display2(score2);
+        display3(score3);
+        display4(score4);
+    }
+
+
+
+    /**
+     * This method displays the sum so far for the turn, in the bottom message.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.textViewBottom);
+        priceTextView.setText(message);
+    }
+
 }
-
-
-

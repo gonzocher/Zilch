@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="114dp">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@android:color/holo_green_light"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/textView"
@@ -19,13 +27,14 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,19 +42,22 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TableRow
+            android:id="@+id/table"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/padding"
             android:background="@android:color/black">
 
-            <TextView
+            <EditText
+                android:id="@+id/inputPlayer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_blue_light"
-                android:textColor="@android:color/holo_purple"
-                android:textStyle="bold"
+                android:hint="Player 1"
+                android:inputType="textCapWords"
                 android:padding="@dimen/padding"
-                android:text="Player 1" />
+                android:textColor="@android:color/holo_purple"
+                android:textStyle="bold" />
 
             <ToggleButton
                 android:id="@+id/toggleButton1"
@@ -56,35 +68,35 @@
 
             <TextView
                 android:id="@+id/score1"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_blue_light"
-                android:textColor="@android:color/holo_purple"
-                android:textStyle="bold"
                 android:padding="@dimen/padding"
                 android:text="0"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_purple"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button50_1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="+50"
-                android:onClick="add1Score50" />
+                android:onClick="add1Score50"
+                android:text="+50" />
 
             <Button
                 android:id="@+id/button100_1"
-                android:layout_width="70dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+100"
-                android:onClick="add1Score100"/>
+                android:onClick="add1Score100"
+                android:text="+100" />
 
             <Button
                 android:id="@+id/button1000_1"
-                android:layout_width="70dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+1000"
-                android:onClick="add1Score1000"/>
+                android:onClick="add1Score1000"
+                android:text="+1000" />
 
         </TableRow>
 
@@ -94,14 +106,16 @@
             android:layout_margin="@dimen/padding"
             android:background="@android:color/black">
 
-            <TextView
+            <EditText
+                android:id="@+id/inputPlayer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_purple"
-                android:textColor="@android:color/holo_blue_light"
-                android:textStyle="bold"
+                android:hint="Player 2"
+                android:inputType="textCapWords"
                 android:padding="@dimen/padding"
-                android:text="Player 2" />
+                android:textColor="@android:color/holo_blue_light"
+                android:textStyle="bold" />
 
             <ToggleButton
                 android:id="@+id/toggleButton2"
@@ -112,35 +126,35 @@
 
             <TextView
                 android:id="@+id/score2"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_purple"
-                android:textColor="@android:color/holo_blue_light"
-                android:textStyle="bold"
                 android:padding="@dimen/padding"
                 android:text="0"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_light"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button50_2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="+50"
-                android:onClick="add2Score50" />
+                android:onClick="add2Score50"
+                android:text="+50" />
 
             <Button
                 android:id="@+id/button100_2"
-                android:layout_width="70dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+100"
-                android:onClick="add2Score100" />
+                android:onClick="add2Score100"
+                android:text="+100" />
 
             <Button
                 android:id="@+id/button1000_2"
-                android:layout_width="70dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+1000"
-                android:onClick="add2Score1000" />
+                android:onClick="add2Score1000"
+                android:text="+1000" />
 
         </TableRow>
 
@@ -150,14 +164,16 @@
             android:layout_margin="@dimen/padding"
             android:background="@android:color/black">
 
-            <TextView
+            <EditText
+                android:id="@+id/inputPlayer3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_blue_light"
-                android:textColor="@android:color/holo_purple"
-                android:textStyle="bold"
+                android:hint="Player 3"
+                android:inputType="textCapWords"
                 android:padding="@dimen/padding"
-                android:text="Player 3" />
+                android:textColor="@android:color/holo_purple"
+                android:textStyle="bold" />
 
             <ToggleButton
                 android:id="@+id/toggleButton3"
@@ -168,35 +184,35 @@
 
             <TextView
                 android:id="@+id/score3"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_blue_light"
-                android:textColor="@android:color/holo_purple"
-                android:textStyle="bold"
                 android:padding="@dimen/padding"
                 android:text="0"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_purple"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button50_3"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="+50"
-                android:onClick="add3Score50" />
+                android:onClick="add3Score50"
+                android:text="+50" />
 
             <Button
                 android:id="@+id/button100_3"
-                android:layout_width="70dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+100"
-                android:onClick="add3Score100" />
+                android:onClick="add3Score100"
+                android:text="+100" />
 
             <Button
                 android:id="@+id/button1000_3"
-                android:layout_width="70dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+1000"
-                android:onClick="add3Score1000" />
+                android:onClick="add3Score1000"
+                android:text="+1000" />
 
         </TableRow>
 
@@ -206,15 +222,16 @@
             android:layout_margin="@dimen/padding"
             android:background="@android:color/black">
 
-        <TextView
-                android:id="@+id/textLast"
+            <EditText
+                android:id="@+id/inputPlayer4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_purple"
-                android:textColor="@android:color/holo_blue_light"
-                android:textStyle="bold"
+                android:hint="Player 4"
+                android:inputType="textCapWords"
                 android:padding="@dimen/padding"
-                android:text="Player 4" />
+                android:textColor="@android:color/holo_blue_light"
+                android:textStyle="bold" />
 
             <ToggleButton
                 android:id="@+id/toggleButton4"
@@ -225,38 +242,69 @@
 
             <TextView
                 android:id="@+id/score4"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_purple"
-                android:textColor="@android:color/holo_blue_light"
-                android:textStyle="bold"
                 android:padding="@dimen/padding"
                 android:text="0"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_light"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button50_4"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="+50"
-                android:onClick="add4Score50" />
+                android:onClick="add4Score50"
+                android:text="+50" />
 
             <Button
                 android:id="@+id/button100_4"
-                android:layout_width="70dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+100"
-                android:onClick="add4Score100" />
+                android:onClick="add4Score100"
+                android:text="+100" />
 
             <Button
                 android:id="@+id/button1000_4"
-                android:layout_width="70dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+1000"
-                android:onClick="add4Score1000" />
+                android:onClick="add4Score1000"
+                android:text="+1000" />
 
         </TableRow>
 
     </TableLayout>
 
+    <TextView
+        android:id="@+id/textViewBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="60dp"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="resetScores"
+        />
+
+
+
+
+
+
+
 </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
