@@ -1,10 +1,12 @@
 package com.mathmaniarobotics.zilch;
 
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import java.text.NumberFormat;
 
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     int score2 = 0;
     int score3 = 0;
     int score4 = 0;
+    int score5 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,20 +140,114 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * This method is called when the add buttons in player 5 are clicked.
+     * addScore will add the button amount (like +50) to the sum.
+     */
+    public void add5Score50(View view) {
+        score5 = score5 + 50;
+        display5(score5);
+    }
+
+    public void add5Score100(View view) {
+        score5 = score5 + 100;
+        display5(score5);
+    }
+
+    public void add5Score1000(View view) {
+        score5 = score5 + 1000;
+        display5(score5);
+    }
+
+    /**
+     * This method displays the sum in score1 on the screen.
+     */
+    private void display5(int number) {
+        TextView quantityTextView5 = (TextView) findViewById(R.id.score5);
+        quantityTextView5.setText("" + number);
+    }
+
+    /**
+     * This method banks the score gained during one turn.  Or just one method to bank the row?
+     * Doesn't work yet
+     */
+    private void bank1(int number) {
+        TextView quantityTextView1 = (TextView) findViewById(R.id.totalPlayer1);
+        quantityTextView1.setText("" + number);
+    }
+
+    public void bank2(View view) {
+
+    }
+
+    public void bank3(View view) {
+
+    }
+
+    public void bank4(View view) {
+
+    }
+
+    public void bank5(View view) {
+
+    }
+
+    /**
+     * This method resets the toggle buttons
+     */
+    private void resetToggle1() {
+        ToggleButton toggleButton1 = (ToggleButton) findViewById(R.id.toggleButton1);
+        toggleButton1.setChecked(false);
+    }
+
+    private void resetToggle2() {
+        ToggleButton toggleButton2 = (ToggleButton) findViewById(R.id.toggleButton2);
+        toggleButton2.setChecked(false);
+    }
+
+    private void resetToggle3() {
+        ToggleButton toggleButton3 = (ToggleButton) findViewById(R.id.toggleButton3);
+        toggleButton3.setChecked(false);
+    }
+
+    private void resetToggle4() {
+        ToggleButton toggleButton4 = (ToggleButton) findViewById(R.id.toggleButton4);
+        toggleButton4.setChecked(false);
+    }
+
+    private void resetToggle5() {
+        ToggleButton toggleButton5 = (ToggleButton) findViewById(R.id.toggleButton5);
+        toggleButton5.setChecked(false);
+    }
+
+    /**
+     * This method adds another player to the table. Make this so that it adds "another" row instead just making visible row 5
+     */
+    public void addPlayer(View view) {
+        TableRow row5 = (TableRow)
+                findViewById(R.id.row5);
+        row5.setVisibility(View.VISIBLE);
+    }
+
+    /**
      * This method resets all scores back to zero.
      */
-    public void resetScores (View view) {
+    public void resetScores(View view) {
         score1 = 0;
         score2 = 0;
         score3 = 0;
         score4 = 0;
+        score5 = 0;
         display1(score1);
         display2(score2);
         display3(score3);
         display4(score4);
+        display5(score5);
+        resetToggle1();
+        resetToggle2();
+        resetToggle3();
+        resetToggle4();
+        resetToggle5();
     }
-
-
 
     /**
      * This method displays the sum so far for the turn, in the bottom message.
@@ -159,5 +256,4 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.textViewBottom);
         priceTextView.setText(message);
     }
-
 }
