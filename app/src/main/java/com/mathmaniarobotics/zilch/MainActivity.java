@@ -1,5 +1,6 @@
 package com.mathmaniarobotics.zilch;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import java.text.NumberFormat;
+
+import static android.graphics.Color.*;
 
 /**
  * This app displays a scorekeeper for the Zilch game.
@@ -270,6 +273,12 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.row5);
         row5.setVisibility(View.VISIBLE);
     }
+
+    /**
+     * This method resets the turn score to zero for one player
+     */
+
+
 
     /**
      * This method resets all scores, totals back to zero.

@@ -70,13 +70,17 @@
                     android:id="@+id/toggleButton1"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
+                    android:textColor="@color/colorAccent"
                     android:textOff=":("
-                    android:textOn=":)" />
+                    android:textOn=":)"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/button50_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add1Score50"
                     android:text="+50" />
 
@@ -84,6 +88,7 @@
                     android:id="@+id/button100_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add1Score100"
                     android:text="+100" />
 
@@ -91,6 +96,7 @@
                     android:id="@+id/button1000_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add1Score1000"
                     android:text="+1000" />
 
@@ -109,6 +115,7 @@
                     android:id="@+id/btnBankP1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="bank1"
                     android:text="Bank!" />
 
@@ -149,13 +156,17 @@
                     android:id="@+id/toggleButton2"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:backgroundTint="@android:color/white"
                     android:textOff=":("
-                    android:textOn=":)" />
+                    android:textOn=":)"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/button50_2"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add2Score50"
                     android:text="+50" />
 
@@ -163,6 +174,7 @@
                     android:id="@+id/button100_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add2Score100"
                     android:text="+100" />
 
@@ -170,6 +182,7 @@
                     android:id="@+id/button1000_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add2Score1000"
                     android:text="+1000" />
 
@@ -188,6 +201,7 @@
                     android:id="@+id/btnBankP2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="bank2"
                     android:text="Bank!" />
 
@@ -228,13 +242,17 @@
                     android:id="@+id/toggleButton3"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:backgroundTint="@android:color/white"
                     android:textOff=":("
-                    android:textOn=":)" />
+                    android:textOn=":)"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/button50_3"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add3Score50"
                     android:text="+50" />
 
@@ -242,6 +260,7 @@
                     android:id="@+id/button100_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add3Score100"
                     android:text="+100" />
 
@@ -249,6 +268,7 @@
                     android:id="@+id/button1000_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add3Score1000"
                     android:text="+1000" />
 
@@ -267,6 +287,7 @@
                     android:id="@+id/btnBankP3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="bank3"
                     android:text="Bank!" />
 
@@ -307,13 +328,17 @@
                     android:id="@+id/toggleButton4"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:backgroundTint="@android:color/white"
                     android:textOff=":("
-                    android:textOn=":)" />
+                    android:textOn=":)"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/button50_4"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add4Score50"
                     android:text="+50" />
 
@@ -321,6 +346,7 @@
                     android:id="@+id/button100_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add4Score100"
                     android:text="+100" />
 
@@ -328,6 +354,7 @@
                     android:id="@+id/button1000_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add4Score1000"
                     android:text="+1000" />
 
@@ -346,6 +373,7 @@
                     android:id="@+id/btnBankP4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="bank4"
                     android:text="Bank!" />
 
@@ -387,13 +415,17 @@
                     android:id="@+id/toggleButton5"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:backgroundTint="@android:color/white"
                     android:textOff=":("
-                    android:textOn=":)" />
+                    android:textOn=":)"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/button50_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add5Score50"
                     android:text="+50" />
 
@@ -401,6 +433,7 @@
                     android:id="@+id/button100_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add5Score100"
                     android:text="+100" />
 
@@ -408,6 +441,7 @@
                     android:id="@+id/button1000_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="add5Score1000"
                     android:text="+1000" />
 
@@ -426,6 +460,7 @@
                     android:id="@+id/btnBankP5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
                     android:onClick="bank5"
                     android:text="Bank!" />
 
@@ -433,25 +468,15 @@
 
         </TableLayout>
 
-        <TextView
-            android:id="@+id/textViewBottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:padding="60dp"
-            android:text=""
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/table" />
-
         <Button
             android:id="@+id/btnAddPlayer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/black"
             android:onClick="addPlayer"
             android:text="Add Player"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/table"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -459,8 +484,10 @@
             android:id="@+id/buttonReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/black"
             android:onClick="resetScores"
             android:text="Game Reset"
+            android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
 
