@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
     int score3 = 0;
     int score4 = 0;
     int score5 = 0;
+    int totalPlayer1 = 0;
+    int totalPlayer2 = 0;
+    int totalPlayer3 = 0;
+    int totalPlayer4 = 0;
+    int totalPlayer5 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method is called when the add buttons in player 1 are clicked.
-     * addScore will add the button amount (like +50) to the sum.
+     * addScore adds the button amount (like +50) to the score.
      */
     public void add1Score50(View view) {
         score1 = score1 + 50;
@@ -60,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method is called when the add buttons in player 2 are clicked.
-     * addScore will add the button amount (like +50) to the sum.
+     * addScore adds the button amount (like +50) to the score.
      */
     public void add2Score50(View view) {
         score2 = score2 + 50;
@@ -87,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method is called when the add buttons in player 3 are clicked.
-     * addScore will add the button amount (like +50) to the sum.
+     * addScore adds the button amount (like +50) to the score.
      */
     public void add3Score50(View view) {
         score3 = score3 + 50;
@@ -105,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method displays the sum in score1 on the screen.
+     * This method displays the sum in score3 on the screen.
      */
     private void display3(int number) {
         TextView quantityTextView3 = (TextView) findViewById(R.id.score3);
@@ -114,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method is called when the add buttons in player 4 are clicked.
-     * addScore will add the button amount (like +50) to the sum.
+     * addScore adds the button amount (like +50) to the score.
      */
     public void add4Score50(View view) {
         score4 = score4 + 50;
@@ -141,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method is called when the add buttons in player 5 are clicked.
-     * addScore will add the button amount (like +50) to the sum.
+     * addScore adds the button amount (like +50) to the score.
      */
     public void add5Score50(View view) {
         score5 = score5 + 50;
@@ -159,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method displays the sum in score1 on the screen.
+     * This method displays the sum in score5 on the screen.
      */
     private void display5(int number) {
         TextView quantityTextView5 = (TextView) findViewById(R.id.score5);
@@ -167,28 +172,66 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method banks the score gained during one turn.  Or just one method to bank the row?
-     * Doesn't work yet
+     * This method banks the score gained during one turn.  Or just one method to bank the current row?
      */
-    private void bank1(int number) {
-        TextView quantityTextView1 = (TextView) findViewById(R.id.totalPlayer1);
-        quantityTextView1.setText("" + number);
+    public void bank1(View view) {
+        totalPlayer1 = totalPlayer1 + score1;
+        displayTotal1(totalPlayer1);
+        score1 = 0;
+        display1(score1);
+    }
+
+    private void displayTotal1(int number) {
+        TextView totalTextView1 = (TextView) findViewById(R.id.totalPlayer1);
+        totalTextView1.setText("" + number);
     }
 
     public void bank2(View view) {
+        totalPlayer2 = totalPlayer2 + score2;
+        displayTotal2(totalPlayer2);
+        score2 = 0;
+        display2(score2);
+    }
 
+    private void displayTotal2(int number) {
+        TextView totalTextView2 = (TextView) findViewById(R.id.totalPlayer2);
+        totalTextView2.setText("" + number);
     }
 
     public void bank3(View view) {
+        totalPlayer3 = totalPlayer3 + score3;
+        displayTotal3(totalPlayer3);
+        score3 = 0;
+        display3(score3);
+    }
 
+    private void displayTotal3(int number) {
+        TextView totalTextView3 = (TextView) findViewById(R.id.totalPlayer3);
+        totalTextView3.setText("" + number);
     }
 
     public void bank4(View view) {
+        totalPlayer4 = totalPlayer4 + score4;
+        displayTotal4(totalPlayer4);
+        score4 = 0;
+        display4(score4);
+    }
 
+    private void displayTotal4(int number) {
+        TextView totalTextView4 = (TextView) findViewById(R.id.totalPlayer4);
+        totalTextView4.setText("" + number);
     }
 
     public void bank5(View view) {
+        totalPlayer5 = totalPlayer5 + score5;
+        displayTotal5(totalPlayer5);
+        score5 = 0;
+        display5(score5);
+    }
 
+    private void displayTotal5(int number) {
+        TextView totalTextView5 = (TextView) findViewById(R.id.totalPlayer5);
+        totalTextView5.setText("" + number);
     }
 
     /**
@@ -220,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method adds another player to the table. Make this so that it adds "another" row instead just making visible row 5
+     * This method adds another player to the table. Make this so that it adds "another" row instead of just making visible row 5
      */
     public void addPlayer(View view) {
         TableRow row5 = (TableRow)
@@ -229,7 +272,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method resets all scores back to zero.
+     * This method resets all scores, totals back to zero.
      */
     public void resetScores(View view) {
         score1 = 0;
@@ -237,23 +280,25 @@ public class MainActivity extends AppCompatActivity {
         score3 = 0;
         score4 = 0;
         score5 = 0;
+        totalPlayer1 = 0;
+        totalPlayer2 = 0;
+        totalPlayer3 = 0;
+        totalPlayer4 = 0;
+        totalPlayer5 = 0;
         display1(score1);
         display2(score2);
         display3(score3);
         display4(score4);
         display5(score5);
+        displayTotal1(totalPlayer1);
+        displayTotal2(totalPlayer2);
+        displayTotal3(totalPlayer3);
+        displayTotal4(totalPlayer4);
+        displayTotal5(totalPlayer5);
         resetToggle1();
         resetToggle2();
         resetToggle3();
         resetToggle4();
         resetToggle5();
-    }
-
-    /**
-     * This method displays the sum so far for the turn, in the bottom message.
-     */
-    private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.textViewBottom);
-        priceTextView.setText(message);
     }
 }

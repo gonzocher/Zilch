@@ -109,7 +109,7 @@
                     android:id="@+id/btnBankP1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="display1"
+                    android:onClick="bank1"
                     android:text="Bank!" />
 
             </TableRow>
